@@ -10,11 +10,29 @@ header {
     .flex-it(space-between);
     padding-bottom: 2%;
     color: @shark;
+    @media @mobile {
+      .flex-it(center, center);
+      flex-direction: column;
+
+      .company-name {
+        margin-top: 2%;
+        margin-bottom: 3%;
+
+        h1 {
+          font-size: 3rem;
+        }
+      }
+    }
 
     nav {
       width: 50%;
       font-size: 1.8rem;
       .flex-it(space-around);
+
+      @media @mobile {
+        width: 100%;
+        font-size: 1.6rem;
+      }
 
       a {
         text-decoration: none;
