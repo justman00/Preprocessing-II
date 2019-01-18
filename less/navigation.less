@@ -1,1 +1,48 @@
 // Navigation Styles here
+header {
+  width: 100%;
+  margin-top: 2%;
+  border-bottom: 2px dashed @navigation-border;
+
+  .header {
+    max-width: 800px;
+    margin: 0 auto;
+    .flex-it(space-between);
+    padding-bottom: 2%;
+    color: @shark;
+    @media @tablet {
+      .flex-it(center, center);
+      flex-direction: column;
+
+      .company-name {
+        margin-top: 2%;
+        margin-bottom: 3%;
+
+        h1 {
+          font-size: 3rem;
+        }
+      }
+    }
+
+    nav {
+      width: 50%;
+      font-size: 1.8rem;
+      .flex-it(space-around);
+
+      @media @tablet {
+        width: 100%;
+      }
+
+      @media @mobile {
+        justify-content: space-around;
+        width: 100%;
+        font-size: 1.6rem;
+      }
+
+      a {
+        text-decoration: none;
+        color: @font-color;
+      }
+    }
+  }
+}
